@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Post;
 
+use App\Http\Controllers\BlogController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,11 +32,11 @@ Route::get('/contact', function() {
 
 Route::get('/post/create', function() {
     DB::table('post')->insert([
-        'title' => 'PHP is ugly',
-        'body' => 'Many people believe that PHPs best days are over. 
-        The programming language created by Lerdorf fell out of the developers 
-        favor a few years ago and has become an ugly duckling in the software industry. 
-        Why? "PHP was designed very poorly from the outset and it has never been really fast.'
+        'title' => 'Swift',
+        'body' => 'Swift is a powerful and intuitive programming language for macOS, iOS, 
+        watchOS, tvOS and beyond. Writing Swift code is interactive and fun, the syntax is 
+        concise yet expressive, and Swift includes modern features developers love. 
+        Swift code is safe by design, yet also produces software that runs lightning-fast.'
     ]);
 });
 
@@ -42,3 +44,5 @@ Route::get('/post', function() {
     $post = Post::find(1);
     return $post;
 });
+
+Route::get('/blog/index', [BlogController::class, 'index']);
