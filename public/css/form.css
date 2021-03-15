@@ -1,0 +1,21 @@
+.post-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 30px;
+    padding: 20px;
+    border: 1px solid rgb(96, 98, 216);
+    border-radius: 10px;
+}
+#title {
+    margin-bottom: 20px;
+}
+#post {
+    resize: none;
+    height: 200px;
+}
+
+#btn {
+    margin-top: 20px;
+    width: 50px;
+}
