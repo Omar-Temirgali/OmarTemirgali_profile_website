@@ -21,4 +21,14 @@ class BlogController extends Controller
         
         return back();
     }
+
+    public function getTitle($title) {
+        $post = Post::where('title', $title)->first();
+
+        if($post == null) {
+            return response('Post with such title does not exist', 404);
+        }
+
+        return view('blog.post')->with(['post'=>$post]);
+    }
 }
