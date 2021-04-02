@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Post;
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,3 +55,6 @@ Route::get('/blog/create', function() {
 Route::post('/blog/create', [BlogController::class, 'store'])->name('add-blog');
 
 Route::get('/post/{title}', [BlogController::class, 'getTitle']);
+
+Route::get('/profile', [ProfileController::class, 'index']);
+Route::post('/profile', [ProfileController::class, 'add'])->name('addprofile');
