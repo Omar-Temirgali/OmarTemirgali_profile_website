@@ -7,6 +7,7 @@ use App\Models\Post;
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\MailController;
 
 Route::get('/', function () {
     return view('home');
@@ -52,4 +53,4 @@ Route::get('/profile/{profile_id}', [ProfileController::class, 'showProfile']);
 
 Route::get('/profiles', [ProfileController::class, 'showProfiles']);
 
-
+Route::get('/mail/send', [MailController::class, 'send']);
