@@ -23,8 +23,8 @@ class ProfileController extends Controller
         if ($request->hasFile('photo')) {
             $file = $request->file('photo');
             $extension = $file->getClientOriginalExtension();
-            $filename = time() . '.' .$extension;
-            $file->move('uploads/profile_photos/', $filename);
+            $filename = $file->getClientOriginalName();
+            $file->move('uploads', $filename);
             $profile->photo = $filename;
         } else {
             return $request;
@@ -34,5 +34,21 @@ class ProfileController extends Controller
         $profile->save();
 
         return view('form_profile')->with('form_profile', $profile);
+    }
+
+    public function showProfile($profile_id) {
+        $profile = Profile::where('id', $profile_id)->first();
+
+        if($profile == null) {
+            return response('Profile with such id does not exist', 404);
+        }
+
+        return view('profiles')->with(['profile'=>$profile]);
+    }
+
+    public function showProfiles() {
+        $profiles = Profile::all();
+
+        return view('all-profiles')->with(['profiles'=>$profiles]);
     }
 }
