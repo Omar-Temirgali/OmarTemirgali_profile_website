@@ -12,7 +12,7 @@
             <span class="btn-spn">{{__("Lang")}}</span>
             <a href="en" class="test-spn">en</a>
             <a href="kz" class="test-spn">kz</a>
-            <a href="jp" class="test-spn">jp</a>
+            <a href="ru" class="test-spn">ru</a>
         </button>
     </div>
 </header>
