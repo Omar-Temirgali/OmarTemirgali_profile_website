@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/app.css" type="text/css">
-    <script src="/js/app.js"></script>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <title>Home</title>
-</head>
-<body>
+@extends('layouts.layout')
+@section('title', __("Home"))
+@section('content')
     @include('inc.header')
     <main class="main">
         <section class="container main-section">
@@ -32,12 +23,7 @@
                 {{__("I studied at lyceum N39 named after Sultan-Akhmet Kozhykov. Currently, I am a sophomore in Suleyman Demirel University and taking several courses about web programming (frontend and backend).")}}
             </p>
             <p>
-                Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate
-                et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen.
-                Glorious baklava ex librus hup hey ad infinitum. Non sequitur condominium
-                facile et geranium incognito. Epsum factorial non deposit quid pro quo
-                hic escorol. Marquee selectus non provisio incongruous feline nolo contendre
-                Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.
+                {{__("Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum. Non sequitur condominium facile et geranium incognito. Epsum factorial non deposit quid pro quo hic escorol. Marquee selectus non provisio incongruous feline nolo contendre Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum.")}}
             </p>
         </div>
         <div class="skills">
@@ -64,5 +50,4 @@
         </div>
     </section>
     @include('inc.footer')
-</body>
-</html>
+@endsection
