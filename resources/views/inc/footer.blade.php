@@ -1,7 +1,7 @@
 <footer class="footer">
     <section class="container footer-container">
         <div class="l-con">
-            <h2>You can find me here: </h2>
+            <h2>{{__("You can find me here:")}} </h2>
             <ul class="links-container">
                 <li><a href="mailto:190103073@stu.sdu.edu.kz"><i class="fa fa-envelope"></i></a></li>
                 <li><a href="https://github.com/Omar-Temirgali"><i class="fab fa-github"></i></a></li>

@@ -12,4 +12,4 @@ testVarOne: {{ $testVarOne }}
 testVarTwo: {{ $testVarTwo }}
 
 Best regards,
-{{ $mail->sender}}
+{{ $mail->sender }}

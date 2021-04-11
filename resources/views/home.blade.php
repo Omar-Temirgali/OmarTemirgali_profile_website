@@ -19,19 +19,17 @@
                     data-type='[ "Hello!", "你好!", "Salut!", "こんにちは。", "안녕하세요" ]'><span class="wrap"></span></a>
                 </h1>
                 <div class="text-container">
-                    <h1>I'm <span class="logo-mod">Omar Temirgali</span>. I create <br/> amazing things.</h1>
-                    <p>I am a programmer and web developer <br/> based in Almaty, Kazakhstan.</p>
+                    <h1>{{__("I'm")}} <span class="logo-mod">{{__("Omar Temirgali.")}}</span> {{__("I create")}} <br/> {{__("amazing things.")}}</h1>
+                    <p>{{__("I am a programmer and web developer")}} <br/> {{__("based in Almaty, Kazakhstan.")}}</p>
                 </div>
             </div>
         </section>
     </main>
     <section class="container sk-container">
         <div class="edu">
-            <h1>Skills and Education</h1>
+            <h1>{{__("Skills and Education")}}</h1>
             <p>
-                I studied at lyceum N39 named after Sultan-Akhmet Kozhykov.
-                Currently, I am a sophomore in Suleyman Demirel University and
-                taking several courses about web programming (frontend and backend).
+                {{__("I studied at lyceum N39 named after Sultan-Akhmet Kozhykov. Currently, I am a sophomore in Suleyman Demirel University and taking several courses about web programming (frontend and backend).")}}
             </p>
             <p>
                 Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate

@@ -54,3 +54,8 @@ Route::get('/profile/{profile_id}', [ProfileController::class, 'showProfile']);
 Route::get('/profiles', [ProfileController::class, 'showProfiles']);
 
 Route::get('/mail/send', [MailController::class, 'send']);
+
+Route::get('/{lang}', function($lang) {
+    App::setlocale($lang);
+    return view('home');
+});
